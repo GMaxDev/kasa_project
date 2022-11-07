@@ -1,0 +1,22 @@
+.header {
+    margin: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        color: var(--primary);
+        margin: 0 20px;
+
+        li {
+            transition: 0.2s opacity;
+            &:hover {
+                color: white;
+                opacity: 0.4;
+            }
+        }
+    }
+}

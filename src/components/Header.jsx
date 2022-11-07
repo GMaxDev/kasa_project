@@ -3,8 +3,12 @@ import {ReactComponent as KasaLogo} from '../assets/img/logo_kasa.svg'
 
 function Header() {
     return(
-        <header>
+        <header className={`${styles.header}`}>
             <KasaLogo />
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">A Propos</a></li>
+            </ul>
         </header>
     )
 }
