@@ -2,6 +2,30 @@
     width: 340px;
     height: 340px;
     margin-bottom: 50px;
-    background-color: red;
     border-radius: var(--corner-10);
+}
+
+.imageContainer {
+    // overflow: hidden;
+
+    img {
+        z-index: -1;
+        min-height: 340px;
+        object-fit: cover;
+        border-radius: var(--corner-10);
+    
+    }
+}
+
+.apartmentTitle {
+    text-align: start;
+    position: relative;
+    width: 300px;
+    left: 20px;
+    bottom: 60px;
+    color: white;
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+    }
 }

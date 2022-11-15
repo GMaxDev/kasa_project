@@ -1,18 +1,12 @@
 import styles from '../styles/CardZone.module.scss'
 import Card from './Card'
+import ApartmentList from '../data/apartment.json'
 
-function CardZone() {
+function CardZone({title, image}) {
+
     return(
         <main className={`${styles.cardzone}`}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {ApartmentList.map( a => <Card title={a.title} cover={a.cover}/>)}
         </main>
     )
 }
