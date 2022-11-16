@@ -4,7 +4,7 @@ import {ReactComponent as KasaLogo} from '../assets/img/logo_kasa.svg'
 function Header() {
     return(
         <header className={`${styles.header}`}>
-            <KasaLogo />
+            <KasaLogo className={styles.imgHeader}/>
             <ul>
                 <li><a href="">Accueil</a></li>
                 <li><a href="">A Propos</a></li>

@@ -21,15 +21,33 @@
         @include mixin.sm-lowerThan {
             font-size: large;
         }
+
+        @include mixin.xs {
+            // =position: relative;
+            font-size: 24px;
+            width: 220px;
+            text-align: start;
+            left: 64px;
+        }
     }
 
     img {
         border-radius: var(--corner-25);
         filter: brightness(60%);
 
+        @include mixin.xs {
+            max-width: 80%;
+            height: 111px;
+            border-radius: var(--corner-10);
+        }
     }
 
     @include mixin.lg-lowerThan {
         width: 80%;
+    }
+
+    @include mixin.xs {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }

@@ -15,4 +15,8 @@
     @include mixin.lg-lowerThan {
         width: 80%;
     }
+
+    @include mixin.xs {
+        padding: 0;
+    }
 }

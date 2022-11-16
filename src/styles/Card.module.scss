@@ -24,6 +24,7 @@
     @include mixin.xs {
         min-width: 200px;
         width: 100%;
+        height: 220px;
     }
 }
 
@@ -36,6 +37,11 @@
         object-fit: cover;
         border-radius: var(--corner-10);
     
+        @include mixin.xs {
+            width: 100%;
+            min-height: 255px;
+            max-height: 250px;
+        }
     }
 }
 
@@ -49,9 +55,5 @@
     h3 {
         font-size: 18px;
         font-weight: 500;
-    }
-
-    @include mixin.xs {
-        width: 250px;
     }
 }
