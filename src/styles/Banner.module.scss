@@ -1,3 +1,5 @@
+@use './mixins' as mixin;
+
 .banner {
     width: 100%;
     margin-bottom: 50px;
@@ -11,11 +13,23 @@
         color: white;
         font-size: 48px;
         font-weight: 500;
+
+        @include mixin.lg-lowerThan {
+            font-size: xx-large;
+        }
+
+        @include mixin.sm-lowerThan {
+            font-size: large;
+        }
     }
 
     img {
         border-radius: var(--corner-25);
         filter: brightness(60%);
 
+    }
+
+    @include mixin.lg-lowerThan {
+        width: 80%;
     }
 }

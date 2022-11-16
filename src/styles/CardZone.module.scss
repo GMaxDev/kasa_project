@@ -1,5 +1,8 @@
+@use './mixins' as mixin;
+
 .cardzone {
-    width: 1240px;
+    max-width: 1240px;
+    width: 100%;
     padding: 56px 50px 0;
     margin-bottom: 50px;
     display: flex;
@@ -8,4 +11,8 @@
 
     border-radius: var(--corner-25);
     background-color: var(--gray-1);
+
+    @include mixin.lg-lowerThan {
+        width: 80%;
+    }
 }

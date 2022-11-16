@@ -5,7 +5,7 @@ import ApartmentList from '../data/apartment.json'
 function CardZone({title, image}) {
 
     return(
-        <main className={`${styles.cardzone}`}>
+        <main className={`${styles.cardzone} br`}>
             {ApartmentList.map( a => <Card title={a.title} cover={a.cover}/>)}
         </main>
     )

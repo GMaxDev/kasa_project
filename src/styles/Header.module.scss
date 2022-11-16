@@ -1,3 +1,5 @@
+@use './mixins' as mixin;
+
 .header {
     margin: 40px 0 63px;
     width: 1240px;
@@ -20,5 +22,9 @@
                 opacity: 0.4;
             }
         }
+    }
+
+    @include mixin.lg-lowerThan {
+        width: 80%;
     }
 }
