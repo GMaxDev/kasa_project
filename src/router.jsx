@@ -3,6 +3,7 @@ import App from "./App";
 import About from "./pages/About/About";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Home from "./pages/Home/Home";
+import Logement from "./pages/logement/logement";
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/logement/:id',
-                element: <Home />
+                element: <Logement />
             },
             {
                 path:'/about',
