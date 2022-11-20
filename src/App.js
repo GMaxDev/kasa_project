@@ -3,7 +3,7 @@ import Banner from './components/Banner'
 import CardZone from './components/CardZone'
 import Footer from './components/Footer'
 import styles from './styles/App.module.scss';
-import Homepage from './pages/Homepage/Homepage';
+import Homepage from './pages/Home/Home';
 import About from './pages/About/About';
 import { Outlet } from 'react-router-dom';
 

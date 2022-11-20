@@ -15,12 +15,11 @@
         color: var(--primary);
         align-items: center;
 
-        .link {
+        a {
             font-size: 24px;
-            transition: 0.2s opacity;
+            transition: 0.1s all ease-in-out;
             &:hover {
-                color: white;
-                opacity: 0.4;
+                text-decoration: underline;
 
             }
             @include mixin.md-lowerThan {
