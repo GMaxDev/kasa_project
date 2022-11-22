@@ -8,7 +8,6 @@
 
     @include mixin.lg-lowerThan {
         min-width: 340px;
-        width: 40%;
     }
 
     @include mixin.md-lowerThan {
@@ -22,6 +21,7 @@
     }
 
     @include mixin.xs {
+
         min-width: 200px;
         width: 100%;
         height: 220px;
@@ -39,9 +39,9 @@
         border-radius: var(--corner-10);
     
         @include mixin.xs {
-            width: 100%;
+
+            width: 100%;            
             min-height: 255px;
-            max-height: 250px;
         }
     }
 

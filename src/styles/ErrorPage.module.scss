@@ -1,0 +1,56 @@
+@use './mixins' as mixin;
+
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-top: 150px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 288px;
+            color: var(--primary);
+        }
+    
+        h2 {
+            font-weight: 500;
+            font-size: 36px;
+            color: var(--primary);
+        }
+    
+        h3 {
+        display: flex;
+        height: 400px;
+            text-align: center;
+            align-items: center;
+            font-weight: 500;
+            font-size: 18px;
+            text-decoration: underline;
+            color: var(--primary);
+        }
+    
+        @include mixin.sm-lowerThan {
+    
+    
+            h1 {
+                font-size: 96px;
+            }
+    
+            h2 {
+                width: 260px;
+                font-size: 18px;
+            }
+    
+            h3 {
+                font-size: 14px;
+            }
+        }
+    }
+}

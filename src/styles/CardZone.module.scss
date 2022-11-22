@@ -18,5 +18,6 @@
 
     @include mixin.xs {
         padding: 0;
+        background-color: transparent;
     }
 }

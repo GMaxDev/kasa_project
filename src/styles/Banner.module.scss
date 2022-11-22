@@ -1,6 +1,7 @@
 @use './mixins' as mixin;
 
 .banner {
+    position: relative;
     width: 100%;
     margin-bottom: 50px;
     display: flex;
@@ -23,11 +24,9 @@
         }
 
         @include mixin.xs {
-            // =position: relative;
             font-size: 24px;
-            width: 220px;
+            width: 217px;
             text-align: start;
-            left: 64px;
         }
     }
 
