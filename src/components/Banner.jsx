@@ -1,5 +1,4 @@
 import styles from '../styles/Banner.module.scss'
-import kasaBanner from '../assets/img/banner_kasa.jpg'
 
 function Banner({imgSrc, title, alt}) {
     return(
