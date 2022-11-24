@@ -1,11 +1,11 @@
 @use './mixins' as mixin;
 
 .infoBloc {
-    display: flex;
-    flex-direction: column;
-    width: 1023px;
+    // display: flex;
+    // flex-direction: column;
+    // width: 1023px;
 
-    .infoBloc__title {
+    &__title {
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -20,21 +20,25 @@
         color: white;
         border-radius: var(--corner-5);
 
-        &:hover {
+        &:hover, &.active {
             cursor: pointer;
         }
     }
 
-    .infoBloc__icon {
-        transform: rotate(180deg);
-        transition: all .2s;
+    &__icon {
+        i {
+            transform: rotate(180deg);
+            transition: all .2s ease-in-out;
+        }
     }
 
-    .active .infoBloc__icon::before {
-        transform: rotate(0deg);
+    &.active &__icon {
+        i {
+            transform: rotate(90deg);
+        }
     }
 
-    .infoBloc__content {
+    &__content {
         visibility: hidden;
         height: 0;
         opacity: 0;
@@ -43,9 +47,11 @@
         transition: all .2s ease-in;
     }
 
-    .active .infoBloc__content {
+    &.active &__content {
         visibility: visible;
-        height: 150px;
-        opacity: 100%;
+        height: auto;
+        overflow: visible;
+        padding: 1rem;
+        opacity: 1;
     }
 }

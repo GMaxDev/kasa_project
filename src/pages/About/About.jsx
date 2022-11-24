@@ -5,7 +5,7 @@ import InfoBloc from '../../components/InfoBloc';
 
 function About() {
     return (
-        <main className={`${styles.app}`}>
+        <main className={styles.app}>
             <Banner imgSrc={kasaBannerAbout} alt="Paysage montagneux avec des nuages"/>
             <InfoBloc title="Titre 1" content="Texte random 1"/>
             <InfoBloc title="Titre 2" content="Texte random 2"/>

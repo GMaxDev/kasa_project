@@ -1,21 +1,21 @@
 import { useState } from 'react'
-import styles from '../styles/InfoBloc.module.scss'
+import '../styles/infoBloc.scss'
 
 function InfoBloc({title, content}) {
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
-    const handleToggle = e => {
+    function handleToggle(e) {
         setActive(!active)
     }
     return(       
-        <div className={`${styles.infoBloc} ${active && 'active'}`}>
-            <div className={styles.infoBloc__title} onClick={handleToggle}>
+        <div className={`infoBloc ${active ? "active" : ""}`}>
+            <div className="infoBloc__title" onClick={handleToggle}>
                     {title}
-                    <span className={styles.infoBloc__icon}>
-                        <i class="fa-solid fa-chevron-up"></i>
+                    <span className="infoBloc__icon">
+                        <i className="fa-solid fa-chevron-up"></i>
                     </span>
-                </div>
-            <div className={styles.infoBloc__content}>{content}</div>
+            </div>
+            <div className="infoBloc__content">{content}</div>
         </div>
     )
 }
