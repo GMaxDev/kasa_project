@@ -1,8 +1,11 @@
 @use './mixins' as mixin;
 
 .infoBloc {
-    // display: flex;
-    // flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
     // width: 1023px;
 
     &__title {
@@ -13,7 +16,6 @@
         width: 1023px;
         height: 47px;
         padding: 0 33px;
-        margin-bottom: 31px;
         background-color: var(--primary);
         font-weight: 500;
         font-size: 24px;
@@ -22,6 +24,17 @@
 
         &:hover, &.active {
             cursor: pointer;
+        }
+
+        @include mixin.lg-lowerThan {
+            width: 80%;
+            font-size: 18px;
+        }
+
+        @include mixin.xs {
+            height: 30px;
+            font-weight: 500;
+            font-size: 13px;
         }
     }
 
@@ -34,17 +47,38 @@
 
     &.active &__icon {
         i {
-            transform: rotate(90deg);
+            transform: rotate(0deg);
         }
     }
 
     &__content {
-        visibility: hidden;
+        width: 1023px;
         height: 0;
+        margin-bottom: 20px;
+        text-align: start;
+        
+        background: #F7F7F7;
+        color: var(--primary);
+        font-weight: 400;
+        font-size: 24px;
+        border-radius: 5px;
+
+
+        visibility: hidden;
         opacity: 0;
         overflow: hidden;
         padding: 0 1rem;
         transition: all .2s ease-in;
+
+        @include mixin.lg-lowerThan {
+            width: 80%;
+            font-size: 18px;
+        }
+
+        @include mixin.xs {
+            font-weight: 400;
+            font-size: 12px;
+        }
     }
 
     &.active &__content {
@@ -54,4 +88,6 @@
         padding: 1rem;
         opacity: 1;
     }
+
+
 }
