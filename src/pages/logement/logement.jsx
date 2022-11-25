@@ -1,9 +1,19 @@
+import ApartmentList from '../../data/apartment.json'
+import { useParams } from "react-router-dom"
 
-function logement() {
+const Logement = () => {
+    const { params } = useParams()
+    const product = ApartmentList.find((a) => a.id === params)
+
+    const { title, location, rating, host, equipments, description, pictures } = product
+
+    console.log(product)
 
     return (
-            <h2>logement</h2>
+        <main>
+            <h2>Logement</h2>
+        </main>
     )
 }
 
-export default logement
+export default Logement

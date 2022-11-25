@@ -9,7 +9,7 @@ function CardZone({title, image}) {
     return(
         <main className={`${styles.cardzone}`}>
                 {ApartmentList.map( a => 
-                    <NavLink to={`logement/${ a.id }`}>
+                    <NavLink to={`Logement/${ a.id }`}>
                         <Card title={a.title} cover={a.cover} id={a.id}/>
                     </NavLink>
                 )}
