@@ -1,20 +1,30 @@
-import ApartmentList from '../../data/apartment.json'
-import Rating from '../../components/Rating'
-
 import { useParams } from "react-router-dom"
+import ApartmentList from '../../data/apartment.json'
+
+import Rating from '../../components/Rating'
+import Tag from '../../components/Tag';
+import InfoBloc from '../../components/InfoBloc'
+import React from "react";
+
+import '../../styles/logement.scss';
 
 
 const Logement = () => {
-    const { params } = useParams()
-    const product = ApartmentList.find((a) => a.id === params)
+    const { paramsId } = useParams()
+    const product = ApartmentList.find((product) => product.id === paramsId)
 
-    // const { title, location, rating, host, equipments, description, pictures } = product
-
-    console.log(product)
+    console.log(paramsId)
 
     return (
-        <main>
-            <Rating rating='3'/>
+        <main className='logement'>
+            <div>
+                <Rating rating='3'/>
+                {/* <Tag getTag='Maison'/> */}
+            </div>
+            <div className='logement__infoZone'>
+                <InfoBloc className="logement__infoZone__info" title="Description" content="" />
+                <InfoBloc title="Equipements" content=""/>
+            </div>
             <h2>Logement</h2>
         </main>
     )

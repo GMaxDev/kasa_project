@@ -15,7 +15,19 @@ function InfoBloc({title, content}) {
                         <i className="fa-solid fa-chevron-up"></i>
                     </span>
             </div>
-            <div className="infoBloc__content">{content}</div>
+            <div className="infoBloc__content">
+                {Array.isArray(content) ? (
+                <ul className="infoBloc__list">
+                    {content.map((equipment, index) => (
+                        <li key={index} className="infoBloc__list-element">
+                            {equipment}
+                        </li>
+                    ))}
+                </ul>
+                ) : (
+                <p className="collapse__text">{content}</p>
+                )}
+            </div>
         </div>
     )
 }
