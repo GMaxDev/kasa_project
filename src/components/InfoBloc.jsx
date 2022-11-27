@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/infoBloc.scss'
 
-function InfoBloc({title, content}) {
+const InfoBloc = ({title, content}) => {
     const [active, setActive] = useState(false)
 
     function handleToggle(e) {

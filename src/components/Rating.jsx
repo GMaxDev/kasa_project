@@ -2,9 +2,10 @@ import '../styles/Rating.module.scss'
 import greyRating from '../assets/img/star_rate.svg'
 import redRating from '../assets/img/star_rate_red.svg'
 
-function Rating(rating)  {
+const Rating = ({ rating }) =>  {
+{/*function Rating(rating)  */}
     const stars = [1, 2, 3, 4, 5]
-
+    console.log(rating)
     return (
         <div className="rating">
             {stars.map((star) => rating >= star ? (

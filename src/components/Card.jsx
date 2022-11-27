@@ -1,6 +1,6 @@
 import styles from '../styles/Card.module.scss'
 
-function Card({title, cover}) {
+const Card =({title, cover}) => {
     return(
         <div className={`${styles.card}`}>
             <div className={styles.imageContainer}>

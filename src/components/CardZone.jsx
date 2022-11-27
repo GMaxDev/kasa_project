@@ -1,19 +1,17 @@
 import styles from '../styles/CardZone.module.scss'
 import Card from './Card'
 import ApartmentList from '../data/apartment.json'
-import { NavLink, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
-function CardZone({title, image}) {
-    const {id} = useParams()
-
+const CardZone = ({title, image}) => {
     return(
-        <main className={`${styles.cardzone}`}>
-                {ApartmentList.map( a => 
-                    <NavLink to={`Logement/${ a.id }`}>
-                        <Card title={a.title} cover={a.cover} id={a.id}/>
-                    </NavLink>
+        <section className={`${styles.cardzone}`}>
+                {ApartmentList.map( apartment => 
+                    <Link to={`logement/${ apartment.id }`}>
+                        <Card title={apartment.title} cover={apartment.cover}/>
+                    </Link>
                 )}
-        </main>
+        </section>
     )
 }
 

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import ApartmentList from '../../data/apartment.json'
+import apartmentList from '../../data/apartment.json'
 
 import Rating from '../../components/Rating'
 import Tag from '../../components/Tag';
@@ -11,15 +11,15 @@ import '../../styles/logement.scss';
 
 const Logement = () => {
     const { paramsId } = useParams()
-    const product = ApartmentList.find((product) => product.id === paramsId)
+    const product = apartmentList.find((product) => product.id === paramsId)
 
     console.log(paramsId)
 
     return (
         <main className='logement'>
             <div>
-                <Rating rating='3'/>
-                {/* <Tag getTag='Maison'/> */}
+                <Rating rating="3"/>
+                <Tag getTag="Maison"/>
             </div>
             <div className='logement__infoZone'>
                 <InfoBloc className="logement__infoZone__info" title="Description" content="" />

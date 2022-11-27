@@ -3,7 +3,7 @@ import styles from '../../styles/App.module.scss';
 import kasaBannerAbout from '../../assets/img/banner_kasa_about.jpg'
 import InfoBloc from '../../components/InfoBloc';
 
-function About() {
+const About = () => {
     return (
         <main className={styles.app}>
             <Banner imgSrc={kasaBannerAbout} alt="Paysage montagneux avec des nuages"/>
