@@ -12,18 +12,20 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   return (
-    <div className={styles.app}>
+    <main className={styles.app}>
         <Router>
           <Header />
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="/Logement/:id" element={<Logement />} />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
+          <main className={styles.body}>
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="/Logement/:id" element={<Logement />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </main>
           <Footer />
         </Router>
-    </div>
+    </main>
   );
 }
 
