@@ -1,11 +1,11 @@
 import Banner from '../../components/Banner';
-import styles from '../../styles/App.module.scss';
+import '../../styles/_app.scss';
 import kasaBannerAbout from '../../assets/img/banner_kasa_about.jpg'
 import InfoBloc from '../../components/InfoBloc';
 
 const About = () => {
     return (
-        <main className={styles.app}>
+        <main className="app">
             <Banner imgSrc={kasaBannerAbout} alt="Paysage montagneux avec des nuages"/>
             <InfoBloc title="Fiabilité" content="
                 Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.

@@ -1,0 +1,74 @@
+@use './mixins' as mixin;
+
+.card {
+    width: 340px;
+    height: 340px;
+    margin-bottom: 50px;
+    border-radius: var(--corner-10);
+
+    @include mixin.lg-lowerThan {
+        min-width: 340px;
+    }
+
+    @include mixin.md-lowerThan {
+        margin-bottom: 130px;
+        width: 100%;
+    }
+
+    @include mixin.sm-lowerThan {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    @include mixin.xs {
+
+        min-width: 200px;
+        width: 100%;
+        height: 220px;
+    }
+
+    &__imageContainer {
+        // overflow: hidden;
+        position: relative;
+    
+        img {
+            position: relative;
+            min-height: 340px;
+            object-fit: cover;
+            border-radius: var(--corner-10);
+        
+            @include mixin.xs {
+    
+                width: 100%;            
+                min-height: 255px;
+            }
+        }
+    
+        &:before {
+            content: '';
+            top: -4px;
+            position: absolute;
+            // max-height: 340px;
+            z-index: 10;
+            height: 100%;
+            width:100%;
+            border-radius: var(--corner-10);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            border-radius: 10px;
+        }
+    }
+    
+    &__apartmentTitle {
+        z-index: 10;
+        text-align: start;
+        position: relative;
+        width: 300px;
+        left: 20px;
+        bottom: 60px;
+        color: white;
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}

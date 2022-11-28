@@ -1,12 +1,12 @@
-import styles from '../styles/Card.module.scss'
+import '../styles/_card.scss'
 
 const Card =({title, cover}) => {
     return(
-        <div className={`${styles.card}`}>
-            <div className={styles.imageContainer}>
+        <div className="card">
+            <div className="card__imageContainer">
                 <img src={cover} alt="" />
             </div>
-            <div className={styles.apartmentTitle}>
+            <div className="card__apartmentTitle">
                 <h3>{title}</h3>
             </div>
         </div>

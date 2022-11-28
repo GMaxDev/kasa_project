@@ -1,11 +1,11 @@
-import styles from '../styles/Header.module.scss'
+import '../styles/_header.scss'
 import {ReactComponent as KasaLogo} from '../assets/img/logo_kasa.svg'
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     return(
-        <header className={`${styles.header}`}>
-            <KasaLogo className={styles.imgHeader}/>
+        <header className="header">
+            <KasaLogo className="header__imgHeader"/>
             <ul>
                 <NavLink end className='link' to="/">Accueil</NavLink>
                 <NavLink className='link' to="/about">A Propos</NavLink>

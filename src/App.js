@@ -2,7 +2,7 @@ import React from "react"
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import styles from './styles/App.module.scss';
+import './styles/_app.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from "./pages/Home/Home";
@@ -12,10 +12,10 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   return (
-    <main className={styles.app}>
+    <main className="app">
         <Router>
           <Header />
-          <main className={styles.body}>
+          <main className="body">
             <Routes>
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />

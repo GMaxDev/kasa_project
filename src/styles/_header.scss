@@ -49,8 +49,8 @@
     @include mixin.xs {
         margin: 10px 0;
     }
-}
 
-.imgHeader {
-    width: 145px;
+    &__imgHeader {
+        width: 145px;
+    }
 }
