@@ -8,14 +8,14 @@
     align-items: center;
 
     &__name {
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         &__titleZone {
             color: var(--primary);
-            flex-direction: start;
-            
+            text-align: start;
+
             h1 {
                 font-weight: 500;
                 font-size: 36px;
@@ -27,16 +27,25 @@
         }
 
         &__host {
-
+            width: 160px;
             &__person_name{
+                display: flex;
+                margin: 0 10px;
                 width : min-content;
+                text-align: end;
 
                 p {
                     display: flex;
-                    margin: 0 -3px;
+                    justify-content: start;
+                    margin: 0 10px;
                     color: var(--primary);
                     font-weight: 500;
                     font-size: 18px;
+                }
+
+                img {
+                    height: 64px;
+                    border-radius: var(--corner-45);
                 }
             }
         }
@@ -44,7 +53,7 @@
 
 
     &__tag_rating {
-        width: 100%;
+        width: 95%;
         display: flex;
         margin-bottom: 13px;
         text-align: center;
@@ -59,8 +68,7 @@
     &__infoZone{
         display: flex;
         text-align: center;
-        justify-content: space-between;
-        width: 90%;
+        width: 100%;
 
         &__info {
             width: 582px;
