@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../styles/infoBloc.scss'
+import '../styles/_infoBloc.scss'
 
 const InfoBloc = ({title, content}) => {
     const [active, setActive] = useState(false)

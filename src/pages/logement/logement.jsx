@@ -21,23 +21,24 @@ const Logement = () => {
                 <div className="logement__name__titleZone">
                     <h1>{product.title}</h1>
                     <p>{product.location}</p>
+                    
+                    <div className="logement__name__titleZone__tags">
+                    {product.tags.map((tag, index) => 
+                            <Tag key={index} getTag={tag}/>
+                        )}
+                    </div>
                 </div>
                 <div className="logement__name__host">
                     <div className="logement__name__host__person_name">
                         <p>{product.host.name}</p>
                         <img src={product.host.picture} alt="" />
                     </div>
-                    <img src="" alt="" className="" />
+                    <div className="logement__name__host__rating">
+                        <Rating rating={product.rating}/>
+                    </div>
                 </div>
             </div>
-            <div className="logement__tag_rating">
-                <div className="logement__tag_rating__list">
-                    {product.tags.map((tag, index) => 
-                            <Tag key={index} getTag={tag}/>
-                        )}
-                </div>
-                <Rating rating={product.rating}/>
-            </div>
+
             <div className='logement__infoZone'>
                 <InfoBloc className="logement__infoZone__info" title="Description" content={product.description} />
                 <InfoBloc className="logement__infoZone__info"  title="Equipements" content={product.equipments}/>

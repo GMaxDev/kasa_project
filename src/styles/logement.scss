@@ -9,9 +9,16 @@
 
     &__name {
         width: 95%;
+        height: 200px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @include mixin.xs {
+            flex-direction: column;
+            height: 100%;
+        }
+
         &__titleZone {
             color: var(--primary);
             text-align: start;
@@ -19,49 +26,83 @@
             h1 {
                 font-weight: 500;
                 font-size: 36px;
+
+                @include mixin.xs {
+                    font-size: 18px;
+                }
             }
-            p {
+            > p {
                 font-weight: 500;
                 font-size: 18px;
+
+                @include mixin.xs {
+                    font-size: 14px;
+                    margin: 0 0 10px;
+                }
+            }
+
+            
+            &__tags {
+                display: flex;
+                margin-bottom: 13px;
+                text-align: center;
+                align-items: center;
+
+                &__list {
+                    display: flex;
+                }
             }
         }
 
         &__host {
-            width: 160px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+            justify-content: space-around;
+
+            @include mixin.xs {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                height: 60px;
+            }
+
             &__person_name{
                 display: flex;
                 margin: 0 10px;
                 width : min-content;
-                text-align: end;
-
-                p {
+                
+                @include mixin.xs {
+                    position: relative;
+                    right: 30px;
+                }
+                > p {
                     display: flex;
                     justify-content: start;
                     margin: 0 10px;
                     color: var(--primary);
                     font-weight: 500;
                     font-size: 18px;
+
+                    @include mixin.xs {
+                        font-size: 12px;
+                    }
                 }
 
                 img {
                     height: 64px;
                     border-radius: var(--corner-45);
+
+                    @include mixin.xs {
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
             }
-        }
-    }
 
+            &__rating {
 
-    &__tag_rating {
-        width: 95%;
-        display: flex;
-        margin-bottom: 13px;
-        text-align: center;
-        align-items: center;
-        justify-content: space-between;
-
-        &__list {
-            display: flex;
+            }
         }
     }
 
@@ -69,6 +110,10 @@
         display: flex;
         text-align: center;
         width: 100%;
+
+        @include mixin.xs {
+            flex-direction: column;
+        }
 
         &__info {
             width: 582px;

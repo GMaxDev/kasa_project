@@ -6,10 +6,22 @@
     align-items: center;
     padding: 0 10px;
     &__content{
-        width: 115px;
+        display: flex;
+        min-width: auto;
+        padding: 0 15px;
         color: white;
         font-size: 14px;
         background-color: var(--primary);
         border-radius: var(--corner-10);
+
+        
+        @include mixin.xs {
+            display: flex;
+            min-width: auto;
+            height: 18px;
+            align-items: center;
+            font-size: 10px;
+            justify-content: center;
+        }
     }
 }

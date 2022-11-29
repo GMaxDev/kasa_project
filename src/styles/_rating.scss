@@ -1,0 +1,12 @@
+@use './mixins' as mixin;
+
+.rating {
+
+    &__icon {
+        padding-right: 5px;
+        @include mixin.xs {
+            width: 20px;
+        }
+    }
+
+}
