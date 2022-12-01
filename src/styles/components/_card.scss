@@ -1,4 +1,4 @@
-@use './mixins' as mixin;
+@use './../utils/mixins' as mixin;
 
 .card {
     width: 340px;
@@ -7,7 +7,7 @@
     border-radius: var(--corner-10);
 
     @include mixin.lg-lowerThan {
-        min-width: 340px;
+        width: 310px;
     }
 
     @include mixin.md-lowerThan {
@@ -21,7 +21,6 @@
     }
 
     @include mixin.xs {
-
         min-width: 200px;
         width: 100%;
         height: 220px;
@@ -36,10 +35,10 @@
             min-height: 340px;
             object-fit: cover;
             border-radius: var(--corner-10);
-        
+
             @include mixin.xs {
-    
                 width: 100%;            
+                max-height: 265px;
                 min-height: 255px;
             }
         }
@@ -69,6 +68,10 @@
         h3 {
             font-size: 18px;
             font-weight: 500;
+        }
+        
+        @include mixin.lg-lowerThan {
+            width: 250px;
         }
     }
 }

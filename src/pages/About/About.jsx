@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner';
-import '../../styles/_app.scss';
+import '../../styles/base/_app.scss';
 import kasaBannerAbout from '../../assets/img/banner_kasa_about.jpg'
 import InfoBloc from '../../components/InfoBloc';
 

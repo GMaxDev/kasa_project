@@ -1,4 +1,4 @@
-import '../../styles/_errorPage.scss'
+import '../../styles/base/_errorPage.scss'
 import { NavLink } from "react-router-dom"
 
 const ErrorPage = () => {

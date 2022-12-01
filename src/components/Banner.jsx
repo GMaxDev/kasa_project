@@ -1,4 +1,4 @@
-import '../styles/_banner.scss'
+import './../styles/components/_banner.scss'
 
 const Banner = ({imgSrc, title, alt}) => {
     return(

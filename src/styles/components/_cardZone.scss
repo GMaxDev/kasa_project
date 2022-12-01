@@ -1,4 +1,4 @@
-@use './mixins' as mixin;
+@use './../utils/mixins' as mixin;
 
 .cardzone {
     max-width: 1240px;
@@ -17,6 +17,7 @@
     }
 
     @include mixin.xs {
+        width: 100%;
         padding: 0;
         background-color: transparent;
     }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../styles/slider.scss'
+import './../styles/components/_slider.scss'
 
 import arrowLeft from "../assets/img/arrowLeft.svg";
 import arrowRight from "../assets/img/arrowRight.svg";

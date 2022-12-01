@@ -1,4 +1,4 @@
-import '../styles/_cardZone.scss'
+import './../styles/components/_cardZone.scss'
 import Card from './Card'
 import ApartmentList from '../data/apartment.json'
 import { Link } from "react-router-dom"

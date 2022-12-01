@@ -1,4 +1,4 @@
-import '../styles/_rating.scss'
+import './../styles/components/_rating.scss'
 import greyRating from '../assets/img/star_rate.svg'
 import redRating from '../assets/img/star_rate_red.svg'
 

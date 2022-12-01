@@ -1,4 +1,4 @@
-import '../styles/_header.scss'
+import './../styles/layout/_header.scss'
 import {ReactComponent as KasaLogo} from '../assets/img/logo_kasa.svg'
 import { NavLink } from 'react-router-dom'
 

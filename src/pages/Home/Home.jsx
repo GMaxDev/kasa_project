@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner';
 import CardZone from '../../components/CardZone'
-import '../../styles/_app.scss';
+import '../../styles/base/_app.scss';
 import kasaBanner from '../../assets/img/banner_kasa.jpg'
 
 const Home = () => {

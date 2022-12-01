@@ -1,4 +1,4 @@
-import '../styles/_footer.scss'
+import './../styles/layout/_footer.scss'
 import {ReactComponent as KasaLogo} from '../assets/img/logo_kasa_small_white.svg'
 
 const Footer = () => {
